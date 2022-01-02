@@ -1,0 +1,9 @@
+while true do
+  wait(1)
+  local args = {
+     [1] = game.CoreGui.RagdollHub.SpamUI.WhatToSpam.Text,
+     [2] = "All"
+  }
+
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+end
