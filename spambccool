@@ -1,5 +1,7 @@
 local BrokenLoop = game.CoreGui.RagdollHub.SpamUI.Check.TextTransparency = 0
 
+
+if BrokenLoop == false then
 while true do
   wait(1)
   local args = {
@@ -8,7 +10,7 @@ while true do
   }
 
   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-  if BrokenLoop then
+  if BrokenLoop == true then
     print("stopping")
     break
    end
